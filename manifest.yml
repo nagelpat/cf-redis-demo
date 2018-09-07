@@ -1,0 +1,9 @@
+---
+applications:
+- name: cf-redis-demo
+  instances: 1
+  path: ./target/cf-redis-demo-0.0.1-SNAPSHOT.jar
+  memory: 1GB
+  services:
+  - myrediscache
+
