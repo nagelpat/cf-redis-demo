@@ -22,13 +22,13 @@ public class HelloController {
 
       ValueOperations<String, String> ops = this.template.opsForValue();
 
-      // Add a Hello World string to your cache.
+      // Add a string set in the application.properties to your cache.
       String key = "greeting";
       if (!this.template.hasKey(key)) {
           ops.set(key, value);
       }
 
-      // Return the string from your cache.
+      // Return the string from the cache.
       return ops.get(key);
    }
 }
