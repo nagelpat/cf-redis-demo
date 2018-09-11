@@ -1,0 +1,31 @@
+Azure Spring Redis Demo
+***********************
+AppsMan Marketplace: myrediscache
+Spring Initializr: https://start.spring.io > cf-redis-demo | web, cloud connector, actuator, redis
+Initializr customization, creating code repo, pipelines
+Visusl Studio Code
+ show plugins
+ show pom.xml
+ show @SpringBootApplicaiton
+ create controller > HelloController.java
+ modify application.properties
+ maven package
+ create manifest.yml
+cf services
+cf push -f manifest.yml
+Apps Manager
+ access application
+ spring boot integration | /actuator
+ pcf metrics
+Demo scalability / stability
+ cf scale
+ actuator/env
+ curl -X POST https://cf-redis-demo.../actuator/shutdown -k
+ autoscaler
+
+Azure Spring SSO Authentication Demo
+************************************
+Draw diagram
+AppsMan: authcode app
+@EnableOAuth2Sso with some config properites in authcode Application.java
+@PreAuthorize with Scope in Resource Server controller
